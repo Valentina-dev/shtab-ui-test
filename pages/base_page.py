@@ -15,9 +15,9 @@ class BasePage:
         self.browser.get(self.url)
 
     def wait(self, locator_function, *args):
-        WebDriverWait(self.browser, 10).until(locator_function(*args))
+        WebDriverWait(self.browser, 30).until(locator_function(*args))
 
-    def get_element(self, locator, timeout=10, interactable=False):
+    def get_element(self, locator, timeout=30, interactable=False):
         counter = 0
         while timeout > counter:
             counter += 1

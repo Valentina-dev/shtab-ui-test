@@ -18,4 +18,3 @@ class CreatingTaskModalWindow(BasePage):
         )
         self.get_element(CreateTask.SAVE_SOURCE_BUTTON).click()
         assert self.get_element(CreateTask.SOURCE_SELECT).text == new_source_name
-
